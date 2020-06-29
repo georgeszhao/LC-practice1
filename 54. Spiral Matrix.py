@@ -37,3 +37,50 @@ def execute() -> object:
 if __name__ == "__main__":
     execute()
 
+#  /** Javascript
+#  * @param {number[][]} matrix
+#  * @return {number[]}
+#  */
+# var spiralOrder = function(matrix) {
+#     if(matrix === null || matrix.length === 0) return [];
+    
+#     let ans = [];
+#     let direction = 0;
+#     let up = 0;
+#     let down = matrix.length - 1;
+#     let left = 0;
+#     let right = matrix[0].length - 1;
+    
+#     while(up <= down && left <= right) {
+#         if (direction == 0) {
+#             for (let j = left; j <= right; j++) {
+#                 ans.push(matrix[up][j]);
+#             }
+#         up++;
+#         }
+        
+#         if (direction == 1) {
+#             for (let i = up; i <= down; i++) {
+#                 ans.push(matrix[i][right]);
+#             }
+#         right--;
+#         }
+        
+#         if (direction == 2) {
+#             for (let j = right; j >= left; j--) {
+#                 ans.push(matrix[down][j]);
+#             }
+#         down--;
+#         }
+        
+#         if (direction == 3) {
+#             for (let i = down; i >= up; i--) {
+#                 ans.push(matrix[i][left]);
+#             }
+#         left++;
+#         }
+#         direction = (direction + 1) % 4;
+#     }
+#     return ans;
+# };
+
