@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         dict = {}
-        for value in sorted(strs):
+        for value in strs:
             key = ''.join(sorted(value))
             dict[key] = dict.get(key, []) + [value]
         return dict.values()
