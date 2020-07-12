@@ -14,3 +14,11 @@ class Solution(object):
             if haystack[i: i + n] == needle:
                 return i
         return -1
+    
+def execute() -> object:
+    haystack, needle = "hello", "ll"
+    sol = Solution()
+    print(sol.strStr(haystack, needle))
+
+if __name__ == "__main__":
+    execute()
