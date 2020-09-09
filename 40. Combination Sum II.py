@@ -27,3 +27,30 @@ def execute() -> object:
 
 if __name__ == "__main__":
     execute()
+
+    
+# # Javascript Solution.
+# var combinationSum2 = function(nums, target) {
+#     if(nums === null || nums.length === 0 || target === 0) return [[]];
+#     let res = [];
+#     nums = nums.sort((a, b) => a - b);
+#     dfs(nums, target, res, [], 0);
+    
+#     return res;
+# };
+
+# const dfs = (nums, target, res, cur, curIdx) => {
+#     if(target === 0) {
+#         res.push(cur.slice());
+#         return;
+#     }
+    
+#     for(let i = curIdx; i < nums.length; i++) {
+#         if(nums[i] > target) break;
+#         if (i == curIdx || nums[i] !== nums[i - 1]) {
+#             cur.push(nums[i]);
+#             dfs(nums, target - nums[i], res, cur, i + 1);
+#             cur.pop();
+#         }
+#     }  
+# };
