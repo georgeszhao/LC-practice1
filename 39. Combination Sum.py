@@ -34,10 +34,9 @@ if __name__ == "__main__":
 # var combinationSum = function(nums, target) {
 #     if(nums === null || nums.length === 0) return [[]];
     
-#     let res = [],
-#         cur = [];
+#     let res = [];
 #     nums.sort((a, b) => a - b);
-#     dfs(nums, target, res, cur, 0);
+#     dfs(nums, target, res, [], 0);
     
 #     return res;
 # };
