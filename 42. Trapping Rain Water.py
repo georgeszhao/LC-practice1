@@ -28,3 +28,30 @@ def execute() -> object:
 
 if __name__ == "__main__":
     execute()
+
+    
+    
+# # Javascript solution.    
+# var trap = function(height) {
+#     if (height === null || height.length === 0 || height.length < 3) return 0;
+
+#     let max = 0,
+#         leftmax = 0,
+#         rightmax = 0,
+#         left = 0,
+#         right = height.length - 1;
+
+#     while (left < right) {
+#         leftmax = Math.max(leftmax, height[left]);
+#         rightmax = Math.max(rightmax, height[right]);
+
+#         if (leftmax < rightmax) {
+#             max += leftmax - height[left];
+#             left++;
+#         } else {
+#             max += rightmax - height[right];
+#             right--;
+#         }
+#     }
+#     return max;
+# };
