@@ -23,3 +23,25 @@ def execute() -> object:
 
 if __name__ == "__main__":
     execute()
+
+    
+# ### Javascript solution.
+# var isValid = function(s) {
+#     if(s === '' || s.length === 0) return true;
+#     let dict = new Map([
+#         ['(', ')'],
+#         ['[', ']'],
+#         ['{', '}'],
+#         ['$', '$']
+#     ]); 
+#     let stack = [];
+#     stack.push('$')
+#     for (let c of s) {
+#       if (dict.get(c) != null) {
+#           stack.push(c);
+#       } else if (dict.get(stack.pop()) != c) {
+#               return false;
+#       }
+#     }
+#     return stack.length == 1;
+# }
